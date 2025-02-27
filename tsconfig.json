@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "es6",
+      "outDir": "public/js",
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "lib": [
+        "ES2021.String","DOM"
+      ]
+    },
+    "include": ["src/**/*"]
+  }

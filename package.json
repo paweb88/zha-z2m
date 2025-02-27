@@ -1,0 +1,30 @@
+{
+  "name": "zhm-z2m",
+  "version": "1.0.0",
+  "description": "Generate Z2M config from ZHM",
+  "main": "public/js/main.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "live-server public"
+  },
+  "author": "Paweł Galerczyk",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "js-yaml": "^4.1.0",
+    "path-browserify": "^1.0.1",
+    "sql.js": "^1.8.0",
+    "stream-browserify": "^3.0.0",
+    "vm-browserify": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@types/sql.js": "^1.4.9",
+    "live-server": "^1.2.1",
+    "ts-loader": "^9.4.3",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}
