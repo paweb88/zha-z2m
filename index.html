@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generator konfiguracji Z2M</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    pre {
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    #downloadLink, #dbDownloadLink {
+      display: block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generator konfiguracji Z2M</h1>
+
+  <!-- Pierwszy krok: Generowanie YAML -->
+  <p>Wybierz plik bazy danych SQLite (backup ZHA):</p>
+  <input type="file" id="dbFile" accept=".sqlite,.db" />
+  <br /><br />
+  <p>Wybierz plik core.device_registry (JSON):</p>
+  <input type="file" id="deviceRegistryFile" />
+  <br /><br />
+  <button id="processBtn">Przetwórz pliki (YAML)</button>
+
+  <h2>Wynik (YAML):</h2>
+  <pre id="output"></pre>
+
+  <hr />
+
+  <!-- Drugi krok: dopisywanie do database.db -->
+  <h2>Dodawanie urządzeń do Z2M Database</h2>
+  <p>Wybierz plik docelowy (database.db), do którego dopisujemy wpisy JSON:</p>
+  <input type="file" id="z2mDatabaseFile" accept=".db,.txt" />
+  <br /><br />
+  <button id="appendBtn">Dodaj do Z2M Database</button>
+
+  <script src="js/bundle.js"></script>
+</body>
+</html>
